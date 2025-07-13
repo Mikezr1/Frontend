@@ -1,0 +1,35 @@
+// // ➡️ Stap 1: maak alle objecten aan
+// const nieuwprijsInput = document.getElementById("Nieuwprijs");
+// // Haalt het input-element op waar je de nieuwprijs invult, op basis van ID.
+// const kortingInput = document.getElementById("Korting");
+// const resultaatP = document.getElementById("resultaat");
+// // P-element waar straks de verkoopprijs getoond wordt.
+// const button = document.getElementById("bereken");
+// // Haalt de knop op waarmee je de berekening start.
+
+// // ➡️ Stap 2: maak de functie aan met een event
+// button.addEventListener("click", function () {
+//     // Voeg een 'click'-event toe aan de knop. Wanneer je klikt, voer je de functie hieronder uit.
+    
+//     //  ➡️ stap 3: alle waarden parsen naar het juiste datatype
+//     const prijs = parseFloat(nieuwprijsInput.value);
+//     // Haalt de waarde (string) uit het nieuwprijs inputveld en zet deze om naar een getal (float).
+
+//     const korting = parseFloat(kortingInput.value);
+//     // Haalt de waarde uit het korting inputveld en zet deze ook om naar een getal.
+    
+//     if (isNaN(prijs) || isNaN(korting)) {
+//         // Controleer of prijs of korting geen getal zijn. Als dat zo is, geef je een foutmelding.
+//         resultaatP.textContent = "Voer geldige getallen in!";
+
+//         // ➡️ stap 4: stop de functie hier
+//         return; // Stop de functie hier als de input ongeldig is.
+//     }
+
+//     // ➡️ stap 5: hier komt de nieuwe prijs
+//     const verkoopprijs = prijs / 100 * (100 - korting);
+//     // Bereken de verkoopprijs na korting: prijs gedeeld door 100 keer (100 - korting).
+
+//     resultaatP.textContent = "Verkoopprijs: €" + verkoopprijs.toFixed(2);
+//     // Zet de berekende verkoopprijs als tekst in het resultaat <p>. Met toFixed(2) rond je af op 2 decimalen.
+// });

@@ -1,0 +1,58 @@
+p,label { 
+    color: darkgrey;
+}
+h1,h2,h3 {
+    color: white;
+}
+
+body {
+    text-align: center;
+    background-color: #3e3e42;
+}
+
+.Alert {
+    color: red;
+}
+
+.Mega {
+    font-size: 40px;
+}
+
+a.big-text{
+    font-size:60px;
+}
+.container{
+    display: flex;
+}
+table {
+  margin: 0 auto; /* centreren */
+  border-spacing: 10px; /* ruimte tussen cellen */
+}
+h1:hover {
+    color:blue;
+}
+
+/* :not(.greeting):hover {
+    color:white;
+} */
+
+img:hover{
+    border: 5px solid red;
+    opacity: 20%;
+}
+
+/* .top-section{
+    background-color: black;
+    position: absolute;
+    width: 100%;
+} */
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+}
+
+.Opsomming :first-child{
+    color: green !important;
+}
+

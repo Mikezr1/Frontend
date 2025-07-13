@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="js/main.js" defer> </script>
+    <!-- <script src="js/steenpapierschaar.js" defer> </script> -->
+    <script src="js/korting.js" defer> </script>
+    <script src="api/pokemonApiHard.js" defer></script>
+    <script src="api/randomBrandApi.js" defer></script>
+    <script src="api/randomCarApi.js" defer></script>
+    <script src="api/carSearch.js" defer ></script>
+</head>
+<body style="">
+    <div style="text-align: center;">
+        <img style="width: 200px;" src="images/logo.png" alt="">
+    </div>
+    <h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"> Welkom op mijn website</h1>
+    <h2>Javascript</h2>
+    <p>Wat is het kenteken van uw Porsche?</p>
+    <input id="input-guess" type="text" value="">
+    <input id="input-submit" type="button" value="raad" onclick="doGuess()">
+    <input type="uw kenteken" value="1234AB">
+
+    <p>Steen Papier Schaar voor korting</p>
+    <div>
+        <input id="input-quess-steen" type="button" value="Steen">
+        <input id="input-quess-papier" type="button" value="Papier">
+        <input id="input-guess-schaar" type="button" value="Schaar">
+    </div>
+        <p>De korting calculator</p>
+        <table>
+            <tr>
+                <td><label for="Nieuwprijs">Nieuwprijs:</label></td>
+                <td><input id="Nieuwprijs" type="text"></td>
+            </tr>
+            <tr>
+                <td><label for="Korting">Korting %:</label></td>
+                <td><input id="Korting" type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                <button id="bereken">Bereken verkoopprijs</button>
+                </td>
+            </tr>
+        </table>
+        <p id="resultaat">Verkoopprijs: </p>
+
+        <h2>API koppeling</h2>
+
+        <div style="background-color: black; border-radius: 20px; padding: 10px;">
+            <h2>All car models in a brand</h2>
+            <input id="car-search-input" type="text" placeholder="Typ een merk...">
+            <input id="car-search-button" type="button" value="Zoek">
+            <!-- <input id="model-search-input" type="text" placeholder="Typ een model...">
+            <input id="model-search-button" type="button" value="Zoek"> -->
+        </div>
+        <div class="car-search">
+            <h2>Search results</h2>
+            <p id="search-results"></p>
+        </div>
+
+        <div>
+        <h2>Random auto</h2>    
+            <!-- <select id="merkenSelect">
+                <option value="">Kies een model</option>
+            </select> -->
+            <input id="random-brand-button" type="button" value="Random auto merk">
+            <input id="random-car-button" type="button" value="Random auto">
+
+        </div>
+        <div>
+            <p id="random-brand"></p>
+            <h2 id="random-car"></h2>
+        </div>
+        <div>
+            <h2>Random pokemon</h2>
+            <input id="pokemon-button" type="button" value="Random Pokémon">
+            <input id="pokemon-input" type="text" value="hallo">
+        </div>
+    <div>
+        <img class="hidden" width="400" id="pokemon-image">
+        <h1 id="pokemon-name"></h1>
+    </div>
+    <p id="tekst"></p>
+
+        <p>Dit is mijn favoriete auto in zes kolommen:</p>
+        <div class="top-section">
+            <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+
+            <div class="grid">
+                <div class="col1">
+                    <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                </div>
+                <div class="col1">
+                    <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                </div>
+                <div class="col1">
+                    <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                </div>
+                <div class="col1">
+                    <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                </div>
+                <div class="col1">
+                    <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                </div>
+                <div class="col1">
+                    <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                </div>
+            </div>
+        </div>
+        <div style="columns: 5;">
+            <div class="col1">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2" style="height: 100%;">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+            <div class="col2">
+                <img style="width: 100%; border-radius: 20px;" src="images/dog.png">
+                <p>Titel</p>
+                <p>Verhaal over de afbeelding</p>
+            </div>
+        </div>
+        <p>Voor meer plaatjes, ga naar <a href="https://wwww.google.nl">Google</a href>.
+            <hr>
+        </p>
+</body>
+</html>
